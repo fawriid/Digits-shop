@@ -1,0 +1,27 @@
+.banner__container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.banner {
+    width: 109%;
+}
+.text__banner {
+    position: absolute;
+    top: 30%;
+    left: 8rem;
+    color: #696969;
+}
+.banner__title {
+    font-size: 9rem;
+    font-weight: bold;
+}
+.title__sub {
+    font-size: 7rem;
+    font-weight: normal;
+    margin-top: 3rem;
+}
+.selected {
+    color: #30c0e4;
+    font-weight: bold;
+}
