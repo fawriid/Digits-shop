@@ -6,7 +6,7 @@ import banner from "../images/banner.jpg";
 const Banner = () => {
     return (
         <>
-            <div className={styles.banner__container}>
+            <div className={styles.banner__container} id="home">
                 <img className={styles.banner} src={banner} alt="banner"></img>
                 <div className={styles.text__banner}>
                     <h2 className={styles.banner__title}>Digits.com</h2>

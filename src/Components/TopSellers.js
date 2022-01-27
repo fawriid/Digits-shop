@@ -9,7 +9,7 @@ import xiaomi from "../images/xiaomi.png";
 const TopSellers = () => {
     return (
         <>
-            <div className={styles.container}>
+            <div className={styles.container} id="top-sellers">
                 <h3>Bests Of 2021</h3>
                 <div>
                     <img src={apple} alt="logo" />

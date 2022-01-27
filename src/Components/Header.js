@@ -13,7 +13,7 @@ const Header = () => {
                             <a href="#home">Home Page </a>
                         </li>
                         <li className={styles.header__item}>
-                            <a href="#about">About Us</a>
+                            <a href="#top-sellers">Top Sellers</a>
                         </li>
                         <li className={styles.header__item}>
                             <a href="#products">Products</a>
