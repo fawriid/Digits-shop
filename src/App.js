@@ -7,6 +7,7 @@ import Banner from "./Components/Banner";
 import Cards from "./Components/Cards";
 import Search from "./Components/Search";
 import TopSellers from "./Components/TopSellers";
+import Footer from "./Components/Footer";
 
 class App extends Component {
     render() {
@@ -17,6 +18,7 @@ class App extends Component {
                 <Cards />
                 <Search />
                 <TopSellers />
+                <Footer />
             </>
         );
     }
