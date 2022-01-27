@@ -18,6 +18,16 @@ const Header = () => {
                         <li className={styles.header__item}>
                             <a href="#products">Products</a>
                         </li>
+                        <li className={styles.header__item}>
+                            <button className={styles.btn}>
+                                <form>
+                                    <span>
+                                        <i className="fas fa-search"></i>
+                                    </span>
+                                    <input className={styles.btn__input}></input>
+                                </form>
+                            </button>
+                        </li>
                     </ul>
                 </div>
                 <div className={styles.logo__container}>
