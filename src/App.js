@@ -6,6 +6,7 @@ import Header from "./Components/Header";
 import Banner from "./Components/Banner";
 import Cards from "./Components/Cards";
 import Search from "./Components/Search";
+import TopSellers from "./Components/TopSellers";
 
 class App extends Component {
     render() {
@@ -15,6 +16,7 @@ class App extends Component {
                 <Banner />
                 <Cards />
                 <Search />
+                <TopSellers />
             </>
         );
     }
