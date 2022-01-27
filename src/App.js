@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./Components/Header";
 import Banner from "./Components/Banner";
 import Cards from "./Components/Cards";
+import Search from "./Components/Search";
 
 class App extends Component {
     render() {
@@ -13,6 +14,7 @@ class App extends Component {
                 <Header />
                 <Banner />
                 <Cards />
+                <Search />
             </>
         );
     }
