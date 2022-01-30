@@ -72,11 +72,10 @@
     display: none;
 }
 
-
 /* media queries */
 
-@media (max-width:768px) {
-    .container{
+@media (max-width: 768px) {
+    .container {
         display: none;
     }
 }

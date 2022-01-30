@@ -25,3 +25,64 @@
     color: #30c0e4;
     font-weight: bold;
 }
+@media (max-width: 1024px) {
+    .banner__title {
+        font-size: 7rem;
+        font-weight: bold;
+    }
+    .title__sub {
+        font-size: 5rem;
+        font-weight: normal;
+        margin-top: 3rem;
+    }
+}
+@media (max-width: 792px) {
+    .banner__title {
+        font-size: 6rem;
+        font-weight: bold;
+    }
+    .title__sub {
+        font-size: 4rem;
+        font-weight: normal;
+        margin-top: 3rem;
+    }
+}
+@media (max-width: 630px) {
+    .banner__title {
+        font-size: 5rem;
+        font-weight: bold;
+    }
+    .title__sub {
+        font-size: 3rem;
+        font-weight: normal;
+        margin-top: 2rem;
+    }
+    .text__banner {
+        position: absolute;
+        top: 30%;
+        left: 5rem;
+        color: #696969;
+    }
+}
+@media (max-width: 420px) {
+    .banner__title {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .title__sub {
+        font-size: 2rem;
+        font-weight: normal;
+        margin-top: 1rem;
+    }
+    .text__banner {
+        position: absolute;
+        top: 30%;
+        left: 3rem;
+        color: #696969;
+    }
+}
+@media (max-width: 250px) {
+    .text__banner {
+        display: none;
+    }
+}

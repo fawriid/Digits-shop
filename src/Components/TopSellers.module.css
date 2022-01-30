@@ -17,3 +17,9 @@
     width: 300px;
     cursor: pointer;
 }
+@media (max-width: 400px) {
+    .container > div img {
+        width: 200px;
+        cursor: pointer;
+    }
+}

@@ -21,3 +21,27 @@
     border-radius: 5px;
     margin: 0.75rem;
 }
+@media (max-width: 596px) {
+    .container {
+        justify-content: center;
+    }
+    .container input {
+        /* width:200px; */
+        font-size: 2rem;
+    }
+    .container p {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 440px) {
+    .container {
+        justify-content: center;
+    }
+    .container input {
+        font: 1.8rem;
+        width: 200px;
+    }
+    .container p {
+        font-size: 4rem;
+    }
+}

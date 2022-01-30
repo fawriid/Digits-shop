@@ -7,7 +7,9 @@ const Search = () => {
         <>
             <div className={styles.container}>
                 <p>Search What You Want </p>
-                <input placeholder="Search" />
+                <form>
+                    <input placeholder="Search" />
+                </form>
             </div>
         </>
     );
