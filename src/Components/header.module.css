@@ -71,3 +71,12 @@
 .btn:focus-within span {
     display: none;
 }
+
+
+/* media queries */
+
+@media (max-width:768px) {
+    .container{
+        display: none;
+    }
+}
