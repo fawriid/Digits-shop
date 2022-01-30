@@ -29,6 +29,9 @@ const Menu = styled.div`
     flex-direction: column;
     cursor: pointer;
     z-index: 5;
+    position: ${(props) => (props.open ? "fixed" : "static")};
+    right: 2rem;
+    top: 2rem;
 
     div {
         height: 0.3rem;
@@ -65,6 +68,7 @@ const NavItem = styled.ul`
     list-style: none;
     padding: 10rem 0 0 3rem;
     z-index: 4;
+    overflow-y: auto;
     transition: all 200ms linear;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
