@@ -95,12 +95,15 @@ const NavItem = styled.ul`
         padding: 0.5rem 0.25rem;
         width: 80%;
     }
-    .btn span {
+    .btn .sub-btn {
         color: #fff;
         font-size: 1.8rem;
         font-weight: bold;
         width: 20%;
         cursor: pointer;
+        background-color: #9e9e9e;
+        border: none;
+        outline: none;
     }
     .btn input {
         font-size: 1.7rem;
@@ -109,7 +112,6 @@ const NavItem = styled.ul`
         border: none;
         color: #fff;
         border-radius: 5px;
-        padding-left: 1rem;
         width: 80%;
     }
 `;
@@ -119,6 +121,7 @@ class Hamburger extends Component {
         super();
         this.state = {
             open: false,
+            text: "",
         };
     }
 
@@ -127,6 +130,21 @@ class Hamburger extends Component {
             open: !this.state.open,
         });
     };
+
+    change = (event) => {
+        this.setState({
+            text: event.target.value,
+        });
+    };
+
+    submit = (event) => {
+        event.preventDefault();
+        this.setState({
+            text: "",
+            open: !this.state.open,
+        });
+    };
+
     render() {
         return (
             <Container>
@@ -139,23 +157,33 @@ class Hamburger extends Component {
 
                 <NavItem open={this.state.open}>
                     <li>
-                        <a href="#home">Home Page </a>
+                        <a href="#home" onClick={this.clickHandler}>
+                            Home Page{" "}
+                        </a>
                     </li>
                     <li>
-                        <a href="#top-sellers">Top Sellers</a>
+                        <a href="#top-sellers" onClick={this.clickHandler}>
+                            Top Sellers
+                        </a>
                     </li>
                     <li>
-                        <a href="#products">Products</a>
+                        <a href="#products" onClick={this.clickHandler}>
+                            Products
+                        </a>
                     </li>
                     <li>
-                        <button className="btn">
-                            <form>
-                                <span type="submit">
+                        <div className="btn">
+                            <form onSubmit={this.submit}>
+                                <button className="sub-btn" type="submit">
                                     <i className="fas fa-search"></i>
-                                </span>
-                                <input></input>
+                                </button>
+                                <input
+                                    type="text"
+                                    value={this.state.text}
+                                    onChange={this.change}
+                                ></input>
                             </form>
-                        </button>
+                        </div>
                     </li>
                 </NavItem>
             </Container>
