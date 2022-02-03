@@ -6,11 +6,11 @@
     background-color: #f3f3f398;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
     margin: 3rem 2rem;
-    transition: all 200ms linear;
-    cursor: pointer;
+    transition: all 250ms linear;
+    /* cursor: pointer; */
 }
 .container:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 .img {
     width: 100%;
@@ -18,7 +18,7 @@
     object-fit: cover;
 }
 .card__info {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     padding: 1rem 1.5rem;
 }
 .name {
@@ -30,4 +30,32 @@
     color: #fff;
     border-radius: 10px;
     padding: 0.25rem 1rem;
+}
+/* number of buy */
+.flex__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.counter {
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #ccc;
+    padding-left: 1rem;
+}
+.counter span {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.counter p {
+    padding: 0.5rem;
+    background-color: rgb(98, 98, 224);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.disable {
+    opacity: 0.5;
 }
