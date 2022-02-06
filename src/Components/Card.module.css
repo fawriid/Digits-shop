@@ -31,6 +31,10 @@
     border-radius: 10px;
     padding: 0.25rem 1rem;
 }
+
+.small {
+    font-size: 1.5rem;
+}
 /* number of buy */
 .flex__container {
     display: flex;

@@ -35,13 +35,23 @@ class Card extends Component {
                     <div className={styles.flex__container}>
                         <div className={styles.card__info}>
                             <p className={styles.name}>{name}</p>
-                            <span className={styles.price}>{price}</span>
+                            <span
+                                className={`${styles.price} ${
+                                    this.state.counter > 1 && styles.small
+                                }`}
+                            >
+                                {price}{" "}
+                                {this.state.counter > 1 &&
+                                    ` * ${this.state.counter} = ${
+                                        Number(price.split(" ")[0]) * this.state.counter
+                                    } $`}
+                            </span>
                         </div>
                         <div className={styles.counter}>
                             <span onClick={this.up}>
                                 <i className="fas fa-angle-up"></i>
                             </span>
-                            <p>{this.state.counter}</p>
+                            <p>{this.state.counter} </p>
                             <span
                                 onClick={this.down}
                                 className={this.state.counter ? "" : styles.disable}
