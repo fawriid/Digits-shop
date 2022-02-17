@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Products.module.css";
 import axios from "axios";
+import { v4 } from "uuid";
 
 import Card from "./Card";
 
@@ -57,6 +58,7 @@ class Products extends Component {
                     {load ? (
                         phones.map((phone) => (
                             <Card
+                                key={v4()}
                                 image={phone.data.data.phone_images[0]}
                                 name={phone.data.data.phone_name}
                             />
