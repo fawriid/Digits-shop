@@ -8,6 +8,7 @@ import Hamburger from "./Components/Hamburger";
 import Landing from "./Components/Landing";
 import Footer from "./Components/Footer";
 import Products from "./Components/Products";
+import AboutUs from "./Components/AboutUs";
 
 class App extends Component {
     render() {
@@ -17,6 +18,7 @@ class App extends Component {
                 <Hamburger />
                 <Switch>
                     <Route path="/products" component={Products} />
+                    <Route path="/aboutus" component={AboutUs} />
                     <Route path="/" component={Landing} />
                 </Switch>
                 <Footer />
