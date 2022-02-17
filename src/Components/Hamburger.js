@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../images/Logo.png";
 import styled from "styled-components";
@@ -148,7 +149,9 @@ class Hamburger extends Component {
     render() {
         return (
             <Container>
-                <img alt="logo" src={logo}></img>
+                <Link to="/">
+                    <img alt="logo" src={logo}></img>
+                </Link>
                 <Menu open={this.state.open} onClick={this.clickHandler}>
                     <div></div>
                     <div></div>
@@ -157,19 +160,19 @@ class Hamburger extends Component {
 
                 <NavItem open={this.state.open}>
                     <li>
-                        <a href="#home" onClick={this.clickHandler}>
+                        <Link to="/" onClick={this.clickHandler}>
                             Home Page{" "}
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#top-sellers" onClick={this.clickHandler}>
+                        <Link to="/top-sellers" onClick={this.clickHandler}>
                             Top Sellers
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#products" onClick={this.clickHandler}>
+                        <Link to="/products" onClick={this.clickHandler}>
                             Products
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <div className="btn">

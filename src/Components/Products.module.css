@@ -1,0 +1,46 @@
+.container {
+    width: 100%;
+    min-height: 70vh;
+    /* overflow: hidden; */
+    padding: 2rem 0;
+    /* margin: 2rem 1rem; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.loader__container {
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading {
+    width: 70px;
+    height: 70px;
+    border: 7px solid rgb(216, 216, 216);
+    border-top-color: skyblue;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+.showbtn {
+    margin: 3rem 0 0 4.5rem;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: skyblue;
+    color: #fff;
+    cursor: pointer;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

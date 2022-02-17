@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 import styles from "./header.module.css";
 import logo from "../images/Logo.png";
@@ -29,13 +30,13 @@ class Header extends Component {
                     <div className={styles.list__container}>
                         <ul className={styles.list}>
                             <li className={styles.header__item}>
-                                <a href="#home">Home Page </a>
+                                <Link to="/">Home Page </Link>
                             </li>
                             <li className={styles.header__item}>
-                                <a href="#top-sellers">Top Sellers</a>
+                                <a href="#top-sellers">Top Sellers </a>
                             </li>
                             <li className={styles.header__item}>
-                                <a href="#products">Products</a>
+                                <Link to="/products">Products</Link>
                             </li>
                             <li className={styles.header__item}>
                                 <div className={styles.btn}>
@@ -54,9 +55,9 @@ class Header extends Component {
                         </ul>
                     </div>
                     <div className={styles.logo__container}>
-                        <a href="#navbar">
+                        <Link to="/">
                             <img className={styles.logo} src={logo} alt="logo"></img>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </>

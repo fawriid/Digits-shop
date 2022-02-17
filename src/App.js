@@ -1,14 +1,13 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
 // components
 import Header from "./Components/Header";
-import Banner from "./Components/Banner";
-import Cards from "./Components/Cards";
-import Search from "./Components/Search";
-import TopSellers from "./Components/TopSellers";
-import Footer from "./Components/Footer";
 import Hamburger from "./Components/Hamburger";
+import Landing from "./Components/Landing";
+import Footer from "./Components/Footer";
+import Products from "./Components/Products";
 
 class App extends Component {
     render() {
@@ -16,10 +15,10 @@ class App extends Component {
             <>
                 <Header />
                 <Hamburger />
-                <Banner />
-                <Cards />
-                <Search />
-                <TopSellers />
+                <Switch>
+                    <Route path="/products" component={Products} />
+                    <Route path="/" component={Landing} />
+                </Switch>
                 <Footer />
             </>
         );
