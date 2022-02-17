@@ -4,7 +4,7 @@ import styles from './Navbaritem.module.css'
 class NavbarItem extends Component {
     render() {
         return (
-            <div>
+            <div className={styles.container}>
                 <a href='#top-sellers'>Top Sellers</a>
             </div>
         );

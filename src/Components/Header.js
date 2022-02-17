@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import styles from "./header.module.css";
-import logo from "../images/Logo.png";
+import logo from "../images/digits.jpg";
 
-import { Route } from 'react-router-dom'
+import { Route } from "react-router-dom";
 import NavbarItem from "./NavbarItem";
 
 class Header extends Component {
@@ -70,8 +70,3 @@ class Header extends Component {
 }
 
 export default Header;
-
-
-{/* <li className={styles.header__item}>
-    <a href="#top-sellers">Top Sellers </a>
-</li>; */}

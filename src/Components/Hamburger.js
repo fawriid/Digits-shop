@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 
-import logo from "../images/Logo.png";
+import logo from "../images/digits.jpg";
 import styled from "styled-components";
+
+import NavbarItem from "./NavbarItem";
 
 // container styled-components
 const Container = styled.div`
@@ -164,14 +166,15 @@ class Hamburger extends Component {
                             Home Page{" "}
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/top-sellers" onClick={this.clickHandler}>
-                            Top Sellers
-                        </Link>
-                    </li>
+                    <Route exact path="/" component={NavbarItem} />
                     <li>
                         <Link to="/products" onClick={this.clickHandler}>
                             Products
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/aboutus" onClick={this.clickHandler}>
+                            About Us
                         </Link>
                     </li>
                     <li>
