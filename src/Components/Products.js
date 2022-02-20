@@ -47,7 +47,7 @@ class Products extends Component {
                         <div className={styles.container}>
                             {load ? (
                                 products.map((phone) => (
-                                    <Link to={`${phone.hits}`} className={styles.phoneLink}><h4>{ phone.phone_name}</h4></Link>
+                                    <Link to={`${phone.hits}`} key={phone.hits} className={styles.phoneLink}><h4>{ phone.phone_name}</h4></Link>
                                 ))
                             ) : (
                                 <div className={styles.loader__container}>
