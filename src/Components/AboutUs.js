@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from "./AboutUs.module.css";
 
 import AboutUsBanner from "../images/digits.jpg";
+import { Link, Routes, Route } from "react-router-dom";
 
 class AboutUs extends Component {
     render() {

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route,Routes } from "react-router-dom";
 
 import styles from "./header.module.css";
 import logo from "../images/digits.jpg";
 
-import { Route } from "react-router-dom";
 import NavbarItem from "./NavbarItem";
 
 class Header extends Component {
@@ -35,7 +34,9 @@ class Header extends Component {
                             <li className={styles.header__item}>
                                 <Link to="/">Home Page </Link>
                             </li>
-                            <Route exact path="/" component={NavbarItem} />
+                            <Routes>
+                                <Route  path="/" element={<NavbarItem />} />
+                            </Routes>
                             <li className={styles.header__item}>
                                 <Link to="/products">Products</Link>
                             </li>

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import styles from "./Products.module.css";
 import axios from "axios";
-import { v4 } from "uuid";
+// import { v4 } from "uuid";
 
-import Card from "./Card";
+// import Card from "./Card";
+import { Link } from "react-router-dom";
 
 class Products extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class Products extends Component {
             load: false,
             products: [],
             phones: [],
+            error:false
         };
     }
 
@@ -21,54 +23,40 @@ class Products extends Component {
             .then((response) => {
                 this.setState({
                     products: response.data.data.phones,
-                });
-                const arr = [];
-                this.state.products.map((phone) => {
-                    axios.get(phone.detail).then((respone2) => {
-                        arr.push(respone2);
-                    });
-
-                    return arr;
-                });
-                this.setState({
-                    phones: arr,
-                    load: true,
-                });
-            });
+                    load:true
+                })
+            })
+            .catch(() => {
+                    this.setState({
+                    error:true
+            })
+        })
     }
-
-    setload = () => {
-        this.setState({
-            load: true,
-        });
-    };
-
-    showTop = () => {
-        setInterval(this.setload, 500);
-    };
-
+    
     render() {
-        const { load, phones } = this.state;
+        const { load,error,products } = this.state;
         return (
             <>
-                <button className={styles.showbtn} onClick={this.showTop}>
-                    Top phones
-                </button>
-                <div className={styles.container}>
-                    {load ? (
-                        phones.map((phone) => (
-                            <Card
-                                key={v4()}
-                                image={phone.data.data.phone_images[0]}
-                                name={phone.data.data.phone_name}
-                            />
-                        ))
-                    ) : (
-                        <div className={styles.loader__container}>
-                            <div className={styles.loading}></div>
+                {error
+                    ?
+                    <div className={styles.container}>
+                        <h1>please come back later, site is on maintance</h1>
+                    </div>
+                    :
+                    <>
+                        <div className={styles.container}>
+                            {load ? (
+                                products.map((phone) => (
+                                    <Link to={`${phone.hits}`} className={styles.phoneLink}><h4>{ phone.phone_name}</h4></Link>
+                                ))
+                            ) : (
+                                <div className={styles.loader__container}>
+                                    <div className={styles.loading}></div>
+                                </div>
+                            )}
                         </div>
-                    )}
-                </div>
+                    </>
+                }
             </>
         );
     }

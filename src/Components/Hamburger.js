@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, Route } from "react-router-dom";
+import { Link, Route,Routes } from "react-router-dom";
 
 import logo from "../images/digits.jpg";
 import styled from "styled-components";
@@ -166,7 +166,9 @@ class Hamburger extends Component {
                             Home Page{" "}
                         </Link>
                     </li>
-                    <Route exact path="/" component={NavbarItem} />
+                    <Routes>
+                        <Route exact path="/" element={<NavbarItem />} />
+                    </Routes>
                     <li>
                         <Link to="/products" onClick={this.clickHandler}>
                             Products
